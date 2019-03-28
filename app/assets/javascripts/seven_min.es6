@@ -249,7 +249,9 @@ $(() => {
         }
     }
 
-    ReactDOM.render(
-        <SevenMinApp />,
-        document.getElementById("seven-min-app"));
+    if ($("#seven-min-app").length) {
+        ReactDOM.render(
+            <SevenMinApp />,
+            document.getElementById("seven-min-app"));
+    }
 });

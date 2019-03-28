@@ -9,12 +9,22 @@ services:
     build:
       target: prod
       context: .
+    container_name: omni2_prod
     volumes:
       - .:/myapp
     ports:
       - "3000:9292"
     depends_on:
       - db
+  migrator:
+    build:
+      target: prod
+      context: .
+    volumes:
+      - .:/myapp
+    depends_on:
+      - web
+    command: ["bash", "scripts/migrate.sh"]
   redis:
     image: redis
 volumes:
