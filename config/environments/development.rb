@@ -20,8 +20,7 @@ Rails.application.configure do
       host: Rails.application.secrets.redis_host,
       port: 6379,
       db: 0,
-      namespace: "cache",
-      password: Rails.application.secrets.redis_password
+      namespace: "cache"
     }
     config.public_file_server.headers = {
       'Cache-Control' => "public, max-age=#{2.days.seconds.to_i}"

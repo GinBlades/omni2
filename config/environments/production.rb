@@ -55,8 +55,7 @@ Rails.application.configure do
     host: Rails.application.secrets.redis_host,
     port: 6379,
     db: 0,
-    namespace: "cache",
-    password: Rails.application.secrets.redis_password
+    namespace: "cache"
   }
 
   # Use a real queuing backend for Active Job (and separate queues per environment)
