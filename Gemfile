@@ -36,3 +36,4 @@ gem "redis-rails"
 
 gem "sprockets"
 gem "sprockets-es6"
+gem "puma"

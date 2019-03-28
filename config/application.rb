@@ -26,7 +26,7 @@ module Omni2
     config.session_store :redis_store, {
       servers: [
         {
-          host: "localhost",
+          host: Rails.application.secrets.redis_host,
           port: 6379,
           db: 0,
           namespace: "session"
